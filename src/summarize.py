@@ -66,7 +66,7 @@ def summarize_topics(filenames, test, max_phrase_len, min_phrase_count):
 
     state = read_csv(filenames[0], compression='gzip', skiprows=2,
                      usecols=[0, 4, 5], header=0,
-                     names=['doc_id', 'word', 'topic'], sep=' ')
+                     names=['doc', 'word', 'topic'], sep=' ')
     state['word'] = state['word'].astype(str)
 
     topics = read_csv(filenames[1], sep='(?: |\t)', engine='python',
@@ -77,71 +77,54 @@ def summarize_topics(filenames, test, max_phrase_len, min_phrase_count):
 
     num_topics = len(topics)
 
-    phrases = defaultdict(set)
-    counts = defaultdict(DataFrame)
+    phrases = dict()
 
-    print >> sys.stderr, 'Creating candidate 1-grams...'
+    print >> sys.stderr, 'Creating candidate n-grams...'
 
-    ngrams = defaultdict(lambda: zeros(num_topics + 1, dtype=int))
+    ngram = dict([(l, l * ['']) for l in xrange(1, max_phrase_len + 1)])
+    doc = dict([(l, l * [-1]) for l in xrange(1, max_phrase_len + 1)])
+    topic = dict([(l, l * [-1]) for l in xrange(1, max_phrase_len + 1)])
+
+    counts = dict([(l, defaultdict(lambda: zeros(num_topics + 2, dtype=int)))
+                   for l in xrange(1, max_phrase_len + 1)])
 
     for _, row in state.iterrows():
-        ngrams[row['word']][row['topic']] += 1
-        ngrams[row['word']][num_topics] += 1
+        for l in xrange(1, max_phrase_len + 1):
 
-    ngrams = DataFrame.from_records([[x] + y.tolist() + [y[num_topics]]
-                                     for x, y in ngrams.items()],
-                                    columns=(['ngram'] + range(num_topics) +
-                                             ['same', 'all']))
+            ngram[l] = ngram[l][1:] + [row['word']]
+            doc[l] = doc[l][1:] + [row['doc']]
+            topic[l] = topic[l][1:] + [row['topic']]
 
-#    assert ngrams['all'].sum() == len(state)
-#    assert sum(ngrams['same'] == ngrams['all']) == len(ngrams)
-#    assert len(ngrams) == len(state['word'].unique())
-#    assert ngrams[range(0, num_topics)].sum().sum() == len(state)
+            if len(set(doc[l])) == 1:
+                if len(set(topic[l])) == 1:
+                    counts[l][tuple(ngram[l])][row['topic']] += 1
+                    counts[l][tuple(ngram[l])][num_topics] += 1
+                counts[l][tuple(ngram[l])][num_topics + 1] += 1
 
-    print >> sys.stderr, 'Selecting 1-gram phrases...'
-
-    phrases[1] = set(ngrams[ngrams['all'] >= min_phrase_count]['ngram'])
-
-    ngrams['prob'] = ngrams['same'] / ngrams['same'].sum()
-    counts[1] = ngrams
-
-    for l in xrange(2, max_phrase_len + 1):
-
-        print >> sys.stderr, 'Creating candidate %d-grams...' % l
-
-        ngrams = defaultdict(lambda: zeros(num_topics + 2, dtype=int))
-
-        curr_ngram = l * ['']
-        doc_history = l * [-1]
-        topic_history = l * [-1]
-
-        for _, row in state.iterrows():
-
-            curr_ngram = curr_ngram[1:] + [row['word']]
-            doc_history = doc_history[1:] + [row['doc_id']]
-            topic_history = topic_history[1:] + [row['topic']]
-
-            if len(set(doc_history)) == 1:
-                if len(set(topic_history)) == 1:
-                    ngrams[tuple(curr_ngram)][row['topic']] += 1
-                    ngrams[tuple(curr_ngram)][num_topics] += 1
-                ngrams[tuple(curr_ngram)][num_topics + 1] += 1
+    for l in xrange(1, max_phrase_len + 1):
 
         ngrams = DataFrame.from_records([[' '.join(x), ' '.join(x[:-1]),
                                           ' '.join(x[1:])] + y.tolist()
-                                         for x, y in ngrams.items()],
+                                         for x, y in counts[l].items()],
                                         columns=(['ngram', 'prefix',
                                                   'suffix'] +
                                                  range(num_topics) +
                                                  ['same', 'all']))
+        ngrams['prob'] = ngrams['same'] / ngrams['same'].sum()
+        counts[l] = ngrams
 
-#        tmp = state.groupby('doc_id')['doc_id'].count()
+#        tmp = state.groupby('doc')['doc'].count()
 #        tmp = (len(state) - tmp[tmp < l].sum() - len(tmp[tmp >= l]) * (l - 1))
 #        assert ngrams['all'].sum() == tmp
 #        assert (sum(ngrams[range(0, num_topics)].sum(axis=1) ==
 #                    ngrams['same']) == len(ngrams))
 
         print >> sys.stderr, 'Selecting %d-gram phrases...' % l
+
+        if l == 1:
+            phrases[l] = set(ngrams[ngrams['all'] >=
+                                    min_phrase_count]['ngram'])
+            continue
 
         n = ngrams['all'].sum()
 
@@ -192,8 +175,6 @@ def summarize_topics(filenames, test, max_phrase_len, min_phrase_count):
 #                print row['ngram'] + '\t' + str(row['score'])
 
         ngrams.drop(['prefix', 'suffix', 'score'], axis=1, inplace=True)
-        ngrams['prob'] = ngrams['same'] / ngrams['same'].sum()
-        counts[l] = ngrams
 
     scores = defaultdict(lambda: defaultdict(float))
 
