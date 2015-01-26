@@ -64,6 +64,16 @@ $(RESULTS_DIR)/summaries/%/T$(T)-S$(S)-ID$(ID)_$(TEST)_$(SELECTION)_$(DIST)_L$(L
 
 # example usage: for corpus in `echo AP_no_stop FOMC_no_stop NIPS_no_stop AP FOMC NIPS`; do for T in `echo 50 100`; do for test in `echo bayes-conditional chi-squared-yates`; do for selection in `echo none bigram n-1-gram`; do for dist in `echo average-posterior empirical prior`; do make results/summaries/"$corpus"/T"$T"-S5000-ID1_"$test"_"$selection"_"$dist"_L5-C5.txt T=$T S=5000 ID=1 TEST=$test SELECTION=$selection DIST=$dist L=5 C=5; done; done; done; done; done
 
+$(RESULTS_DIR)/alt_summaries/%/T$(T)-S$(S)-ID$(ID)_$(DIST)_L$(L)-C$(C).txt: $(RESULTS_DIR)/lda/%/T$(T)-S$(S)-ID$(ID)
+	mkdir -p $(@D); \
+	python -u $(SRC_DIR)/alt_summarize.py \
+	--state $</state.txt.gz \
+	--topic-keys $</topic-keys.txt \
+	--dist $(DIST) \
+	--max-phrase-len $(L) \
+	--min-phrase-count $(C) \
+	> $@
+
 $(RESULTS_DIR)/turbo_topics/%/T$(T)-S$(S)-ID$(ID)_no-perm_C$(C)-P$(P):  $(RESULTS_DIR)/lda/%/T$(T)-S$(S)-ID$(ID)/state.txt.gz
 	mkdir -p $@; \
 	python -u $(SRC_DIR)/turbo.py \
