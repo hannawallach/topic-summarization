@@ -92,7 +92,8 @@ $(RESULTS_DIR)/turbo_topics/%/T$(T)-S$(S)-ID$(ID)_no-perm_C$(C)-P$(P):  $(RESULT
 	$@/vocab.txt \
 	$@/assign.txt; \
 	touch stop_words.txt; \
-	python -u libs/turbotopics-py/lda_topics.py \
+	tar zxvf $(LIBS_DIR)/turbotopics-py.tgz -C $(LIBS_DIR); \
+	python -u $(LIBS_DIR)/turbotopics-py/lda_topics.py \
 	--corpus=$@/corpus.txt \
 	--vocab=$@/vocab.txt \
 	--assign=$@/assign.txt \
