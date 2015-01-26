@@ -63,3 +63,26 @@ $(RESULTS_DIR)/summaries/%/T$(T)-S$(S)-ID$(ID)_$(TEST)_$(SELECTION)_$(DIST)_L$(L
 	> $@
 
 # example usage: for corpus in `echo AP_no_stop FOMC_no_stop NIPS_no_stop AP FOMC NIPS`; do for T in `echo 50 100`; do for test in `echo bayes-conditional chi-squared-yates`; do for selection in `echo none bigram n-1-gram`; do for dist in `echo average-posterior empirical prior`; do make results/summaries/"$corpus"/T"$T"-S5000-ID1_"$test"_"$selection"_"$dist"_L5-C5.txt T=$T S=5000 ID=1 TEST=$test SELECTION=$selection DIST=$dist L=5 C=5; done; done; done; done; done
+
+$(RESULTS_DIR)/turbo_topics/%/T$(T)-S$(S)-ID$(ID)_no-perm_C$(C)-P$(P):  $(RESULTS_DIR)/lda/%/T$(T)-S$(S)-ID$(ID)/state.txt.gz
+	mkdir -p $@; \
+	python -u $(SRC_DIR)/turbo.py \
+	--state $< \
+	--output $@/corpus.txt \
+	$@/vocab.txt \
+	$@/assign.txt; \
+	touch stop_words.txt; \
+	python -u libs/turbotopics-py/lda_topics.py \
+	--corpus=$@/corpus.txt \
+	--vocab=$@/vocab.txt \
+	--assign=$@/assign.txt \
+	--ntopics=$(T) \
+	--min-count=5 \
+	--pval=$(P) \
+	--out=$@/; \
+	rm stop_words.txt
+
+# example usage: for corpus in `echo AP_no_stop FOMC_no_stop NIPS_no_stop AP FOMC NIPS`; do for T in `echo 50 100`; do make results/turbo_topics/"$corpus"/T"$T"-S5000-ID1_no-perm_C5-P0.0001 T=$T S=5000 ID=1 C=5 P=0.0001; done; done
+
+# note that this is what Dave suggested in person and faster than
+# using permutation tests (as in the paper)
