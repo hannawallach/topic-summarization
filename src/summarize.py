@@ -3,8 +3,8 @@ from __future__ import division
 import sys
 from argparse import ArgumentDefaultsHelpFormatter, ArgumentParser
 from collections import defaultdict
-from numpy import abs, exp, log, log2, power, zeros
-from pandas import DataFrame
+from numpy import abs, exp, log, log2, percentile, power, zeros
+from pandas import DataFrame, Series
 from pandas.io.parsers import read_csv
 from scipy.special import gammaln
 
@@ -60,7 +60,8 @@ def csy(a, b, c, d, n, a_plus_b, a_plus_c):
     return num / den
 
 
-def summarize_topics(filenames, test, max_phrase_len, min_phrase_count):
+def summarize_topics(filenames, test, selection, dist, max_phrase_len,
+                     min_phrase_count):
     """
     """
 
@@ -72,8 +73,20 @@ def summarize_topics(filenames, test, max_phrase_len, min_phrase_count):
     topics = read_csv(filenames[1], sep='(?: |\t)', engine='python',
                       index_col=0, header=None,
                       names=(['alpha'] + [x for x in xrange(1, 20)]))
-    topics['prob'] = state.groupby('topic')['word'].count() / len(state)
-#    topics['prob'] = topics['alpha'] / topics['alpha'].sum()
+    if dist == 'average-posterior':
+        topics['prob'] = zeros(len(topics))
+        for _, df in state.groupby('doc'):
+            topics['prob'] += (topics['alpha'].add(df.groupby('topic').size(),
+                                                   fill_value=0) /
+                               (topics['alpha'].sum() + len(df)))
+        topics['prob'] /= state['doc'].nunique()
+    elif dist == 'empirical':
+        topics['prob'] = state.groupby('topic')['word'].count() / len(state)
+    else:
+        topics['prob'] = topics['alpha'] / topics['alpha'].sum()
+
+#    assert topics['prob'].sum() >= 1-1e-15
+#    assert topics['prob'].sum() <= 1+1e-15
 
     num_topics = len(topics)
 
@@ -110,7 +123,6 @@ def summarize_topics(filenames, test, max_phrase_len, min_phrase_count):
                                                   'suffix'] +
                                                  range(num_topics) +
                                                  ['same', 'all']))
-        ngrams['prob'] = ngrams['same'] / ngrams['same'].sum()
         counts[l] = ngrams
 
 #        tmp = state.groupby('doc')['doc'].count()
@@ -136,8 +148,8 @@ def summarize_topics(filenames, test, max_phrase_len, min_phrase_count):
         prefix_cache = ngrams.groupby('prefix')['all'].sum()
         suffix_cache = ngrams.groupby('suffix')['all'].sum()
 
-        assert prefix_cache.sum() == ngrams['all'].sum()
-        assert suffix_cache.sum() == ngrams['all'].sum()
+#        assert prefix_cache.sum() == ngrams['all'].sum()
+#        assert suffix_cache.sum() == ngrams['all'].sum()
 
         scores = len(ngrams) * [None]
 
@@ -166,23 +178,52 @@ def summarize_topics(filenames, test, max_phrase_len, min_phrase_count):
         ngrams['score'] = scores
 
         if test == bfu or test == bfc:
-            phrases[l] = set(ngrams[ngrams['score'] <= (1.0 / 10)]['ngram'])
-#            for _, row in ngrams[ngrams['score'] <= (1.0 / 10)].iterrows():
-#                print row['ngram'] + '\t' + str(row['score'])
+            keep = ngrams['score'] <= (1.0 / 10)
         else:
-            phrases[l] = set(ngrams[ngrams['score'] > 10.83]['ngram'])
-#            for _, row in ngrams[ngrams['score'] > 10.83].iterrows():
-#                print row['ngram'] + '\t' + str(row['score'])
+            keep = ngrams['score'] > 10.83
+
+        if selection == 'none':
+            phrases[l] = set(ngrams[keep]['ngram'])
+        else:
+            if l == 2:
+                phrases[l] = dict(ngrams[keep].set_index('ngram')['score'])
+            else:
+                m = 2 if selection == 'bigram' else l-1
+                if test == bfu or test == bfc:
+                    tmp = set([k for k, v in phrases[m].items()
+                               if v <= percentile(sorted(phrases[m].values(),
+                                                         reverse=True),
+                                                  (1.0 - 1.0 / 2**l) * 100)])
+                else:
+                    tmp = set([k for k, v in phrases[m].items()
+                               if v >= percentile(sorted(phrases[m].values()),
+                                                  (1.0 - 1.0 / 2**l) * 100)])
+                if selection == 'bigram':
+                    keep &= Series([all([' '.join(bigram) in tmp for bigram in
+                                         zip(words, words[1:])]) for words in
+                                    [ngram.split() for ngram in
+                                     ngrams['ngram']]])
+                    phrases[l] = set(ngrams[keep]['ngram'])
+                else:
+                    keep &= (ngrams['prefix'].isin(tmp) &
+                             ngrams['suffix'].isin(tmp))
+                    phrases[l] = dict(ngrams[keep].set_index('ngram')['score'])
 
         ngrams.drop(['prefix', 'suffix', 'score'], axis=1, inplace=True)
+
+    if selection == 'bigram':
+        phrases[2] = set(phrases[2].keys())
+    elif selection == 'n-1-gram':
+        for l in xrange(2, max_phrase_len + 1):
+            phrases[l] = set(phrases[l].keys())
 
     scores = defaultdict(lambda: defaultdict(float))
 
     for l in xrange(1, max_phrase_len + 1):
 
         ngrams = counts[l]
-
         n = ngrams['same'].sum()
+        ngrams['prob'] = ngrams['same'] / n
 
         for topic in xrange(num_topics):
 
@@ -222,7 +263,7 @@ def summarize_topics(filenames, test, max_phrase_len, min_phrase_count):
 
                 scores[topic][row['ngram']] = p_phrase * a + p_not_phrase * b
 
-    for topic, row in topics.sort('prob', ascending=False).iterrows():
+    for topic, row in topics.iterrows():
         print 'Topic %d: %s' % (topic, ' '.join(row[1:11]))
         print '---'
         print '\n'.join(['%s (%f)' % (x, y) for x, y in
@@ -247,9 +288,15 @@ def main():
     p.add_argument('--topic-keys', type=str, metavar='<topic-keys>',
                    required=True, help='MALLET topics keys file')
     p.add_argument('--test', metavar='<test>', required=True,
-                   choices=['bayes-unconditional', 'bayes-conditional',
+                   choices=['bayes-conditional', 'bayes-unconditional',
                             'chi-squared-yates'],
                    help='hypothesis test for phrase generation')
+    p.add_argument('--selection', metavar='<selection>', required=True,
+                   choices=['none', 'bigram', 'n-1-gram'],
+                   help='additional selection criterion')
+    p.add_argument('--dist', metavar='<dist>', required=True,
+                   choices=['average-posterior', 'empirical', 'prior'],
+                   help='distribution over topics')
     p.add_argument('--max-phrase-len', type=int, metavar='<max-phrase-len>',
                    default=5, help='maximum phrase length')
     p.add_argument('--min-phrase-count', type=int,
@@ -260,7 +307,8 @@ def main():
 
     try:
         summarize_topics([args.state, args.topic_keys], tests[args.test],
-                         args.max_phrase_len, args.min_phrase_count)
+                         args.selection, args.dist, args.max_phrase_len,
+                         args.min_phrase_count)
     except AssertionError:
         p.print_help()
 
