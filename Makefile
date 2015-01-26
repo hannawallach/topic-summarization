@@ -74,6 +74,16 @@ $(RESULTS_DIR)/alt_summaries/%/T$(T)-S$(S)-ID$(ID)_$(DIST)_L$(L)-C$(C).txt: $(RE
 	--min-phrase-count $(C) \
 	> $@
 
+$(RESULTS_DIR)/mallet_summaries/%/T$(T)-S$(S)-ID$(ID)_$(DIST)_L$(L)-C$(C).txt: $(RESULTS_DIR)/lda/%/T$(T)-S$(S)-ID$(ID)
+	mkdir -p $(@D); \
+	python -u $(SRC_DIR)/mallet_summarize.py \
+	--state $</state.txt.gz \
+	--topic-keys $</topic-keys.txt \
+	--dist $(DIST) \
+	--max-phrase-len $(L) \
+	--min-phrase-count $(C) \
+	> $@
+
 $(RESULTS_DIR)/turbo_topics/%/T$(T)-S$(S)-ID$(ID)_no-perm_C$(C)-P$(P):  $(RESULTS_DIR)/lda/%/T$(T)-S$(S)-ID$(ID)/state.txt.gz
 	mkdir -p $@; \
 	python -u $(SRC_DIR)/turbo.py \
