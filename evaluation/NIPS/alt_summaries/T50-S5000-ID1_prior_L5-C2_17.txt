@@ -1,0 +1,1 @@
+dynamics; ordinary differential equations; fixed points; recurrent neural network; excitatory inhibitory networks; hopfield; stable state; hopf bifurcation; lyapunov function; self coupling term

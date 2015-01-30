@@ -1,0 +1,1 @@
+distances euclidean distance hamming distance; euclidean distance feature space; vector; vector quantization; space; feature space; transformations translations rotations scaling; dot product feature space; dimensional feature space; distance

@@ -1,0 +1,1 @@
+vector quantization; feature space; feature vectors; tangent distance; feature vector; feature extraction; euclidean distance; distance measures; pattern recognition; distance metric

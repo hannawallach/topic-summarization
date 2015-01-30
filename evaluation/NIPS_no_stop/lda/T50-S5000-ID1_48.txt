@@ -1,0 +1,1 @@
+network; units; hidden; layer; output; unit; networks; weights; architecture; propagation

@@ -1,0 +1,1 @@
+tangent distance; handwritten character recognition; distance measures; transformations; distance; template matching; affine transformations; matching; invariant; euclidean distance

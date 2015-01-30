@@ -1,0 +1,1 @@
+multilayer perceptrons mlps; speech recognition; hidden markov; continuous speech; recognition system; speaker independent; word recognition; recognition systems; automatic speech; markov models

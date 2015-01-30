@@ -1,0 +1,1 @@
+neurons; synaptic; neuron; membrane; excitatory; model; inhibitory; cell; synapses; potential

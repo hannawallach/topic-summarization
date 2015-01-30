@@ -1,0 +1,1 @@
+training; generalization; soft committee machine; generalization performance; error; size training set; generalization error; weight decay; early stopping; weights

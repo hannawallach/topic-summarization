@@ -1,0 +1,1 @@
+regular grammar; finite automaton; regular languages; bengio frasconi; finite automata; term dependencies; noun phrase; representational inductive; grammatical inference; reber grammar

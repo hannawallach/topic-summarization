@@ -1,0 +1,1 @@
+distances euclidean distance hamming distance; euclidean distance feature space; vector; vector quantization; space; feature space; matrix gij kxi xj dot; vectors live euclidean vector space; transforms space high dimensional feature; vector quantization vq multidimensional scaling

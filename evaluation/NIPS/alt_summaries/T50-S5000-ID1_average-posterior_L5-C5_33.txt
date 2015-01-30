@@ -1,0 +1,1 @@
+model; maximum likelihood estimation; maximum likelihood; gaussian mixture model; mixture models; em algorithm; models; mixture model; expectation maximization em; density estimation

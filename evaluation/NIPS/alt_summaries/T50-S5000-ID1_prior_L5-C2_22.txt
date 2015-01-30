@@ -1,0 +1,1 @@
+radial basis function rbf; radial basis functions; radial basis function; radial basis functions rbfs; radial basis; nearest neighbor; nearest neighbor lookup; local; nearest neighbors; smooth nonlinear functions

@@ -1,0 +1,1 @@
+vector; vector quantization; space; feature space; dimensional feature space; distance; feature; tangent distance; vectors; feature vectors

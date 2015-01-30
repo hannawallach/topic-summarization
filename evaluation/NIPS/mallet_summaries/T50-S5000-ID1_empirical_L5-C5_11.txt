@@ -1,0 +1,1 @@
+speech recognition; hidden markov; ms tdnn; character recognition; word recognition; emission probabilities; continuous speech recognition; hybrid system; pattern recognition; hmm system

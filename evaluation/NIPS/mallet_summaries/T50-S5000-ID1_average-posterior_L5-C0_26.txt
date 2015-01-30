@@ -1,0 +1,1 @@
+deterministic annealing; optimization problem; boltzmann machine; simulated annealing; ill posed; local minima; objective function; constrained optimization; constraint satisfaction; ill posed problem

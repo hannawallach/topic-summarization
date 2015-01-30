@@ -1,0 +1,1 @@
+linear threshold with multiple transitions; networks with threshold activation functions; vc dimension; piecewise polynomial activation function; vapnik chervonenkis dimension; threshold; lower bound; upper bound; bounds; bound

@@ -1,0 +1,1 @@
+local; data; basis; function; rbf; global; functions; radial; locally; points

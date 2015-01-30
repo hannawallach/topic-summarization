@@ -1,0 +1,1 @@
+problem; optimization; local minima objective function; constraints multiple membership constraints; simulated annealing; optimization problem; objective function; combinatorial optimization problem; optimization problems; deterministic annealing

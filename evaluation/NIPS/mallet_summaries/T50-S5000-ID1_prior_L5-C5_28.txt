@@ -1,0 +1,1 @@
+reinforcement learning; value function; dynamic programming; q learning; state space; optimal policy; markov decision; policy iteration; optimal control; function approximators

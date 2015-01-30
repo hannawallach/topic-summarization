@@ -1,0 +1,1 @@
+remote sensing; detection; lighting conditions; color constancy; obstacle avoidance; color; video; system; video camera; false alarm

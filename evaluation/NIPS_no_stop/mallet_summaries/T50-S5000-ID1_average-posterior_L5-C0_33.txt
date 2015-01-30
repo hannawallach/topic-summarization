@@ -1,0 +1,1 @@
+actor critic; adaptive control; control law; parti game; open loop; play chess; nonlinear control; system control; outcome games; performance index

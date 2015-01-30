@@ -1,0 +1,1 @@
+gradient descent; gradient; algorithm; learning rate; descent; learning; convergence; weight vector; weight; learning algorithm

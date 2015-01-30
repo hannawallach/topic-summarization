@@ -1,0 +1,1 @@
+find optimal memoryless policies; sarsa called truncated sarsa; reinforcement learning; actions; closed loop control; reinforcement; robot; environment; partially observable environments; optimal memoryless policy

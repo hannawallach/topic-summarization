@@ -1,0 +1,1 @@
+support vector machines; classification; decision tree; decision trees; nearest neighbor classifier; classifier; classifiers; class; decision; pattern classification

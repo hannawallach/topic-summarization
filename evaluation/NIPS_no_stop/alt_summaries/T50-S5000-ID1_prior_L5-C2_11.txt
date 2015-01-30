@@ -1,0 +1,1 @@
+vocabulary continuous speech recognition csr; system art continuous speech recognition; hidden markov models hmm; vocabulary continuous speech recognition; hmm speech recognition system; automatic speech recognition asr; vocabulary recognition word spotting; automatic speech recognition systems; speech recognition; continuous speech recognition

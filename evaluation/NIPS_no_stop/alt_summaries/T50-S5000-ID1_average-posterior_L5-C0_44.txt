@@ -1,0 +1,1 @@
+gradient descent; xt denotes dimensional vector yt; learning algorithms expressions learning rates; online bp modified bp momentum; xt tth instance yt tth; rate convergence backpropagation late learning; backpropagation learning rate algorithm paper; slowest constant called learning convergence; global learning rate batch updates; line learning infinite sequence independent

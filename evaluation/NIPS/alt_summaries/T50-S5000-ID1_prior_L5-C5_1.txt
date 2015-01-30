@@ -1,0 +1,1 @@
+vc dimension; vapnik chervonenkis dimension; threshold; lower bound; upper bound; bounds; bound; dimension; vc; boolean

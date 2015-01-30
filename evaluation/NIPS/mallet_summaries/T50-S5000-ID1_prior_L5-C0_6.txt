@@ -1,0 +1,1 @@
+tangent distance; distance measures; template matching; euclidean distance; affine transformations; graph matching; pattern recognition; nearest neighbor; tangent distances; translation invariance

@@ -1,0 +1,1 @@
+reinforcement learning rl; dynamic programming dp; finite state controller; optimal value function; continuous state spaces; q learning watkins; hamilton jacobi bellman; stochastic control problems; reinforcement learning algorithms; soft state aggregation

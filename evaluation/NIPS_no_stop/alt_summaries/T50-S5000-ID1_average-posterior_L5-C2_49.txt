@@ -1,0 +1,1 @@
+separating set linearly separable; number nodes node complexity; vc dimension; threshold; linear threshold; bounds; lower bound; upper bound; dimension; bound

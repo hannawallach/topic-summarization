@@ -1,0 +1,1 @@
+speech recognition; continuous speech recognition; hidden markov models; multilayer perceptrons mlps; speech; speech recognition system; hidden markov; recognition; baum welch; speaker independent

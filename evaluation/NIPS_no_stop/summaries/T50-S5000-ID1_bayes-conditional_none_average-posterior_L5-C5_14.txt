@@ -1,0 +1,1 @@
+learning; unsupervised supervised learning; incorporate prior knowledge; explanation based learning; unsupervised hebbian learning; learning rule based; hebbian learning rule; examples training set; supervised learning; learning rules

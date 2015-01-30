@@ -1,0 +1,1 @@
+encoded firing rate poisson neuron; information carried spike trains; spike trains; spike; firing; action potentials spikes; term potentiation ltp; neurons; firing rate; noisy spiking neurons

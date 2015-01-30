@@ -1,0 +1,1 @@
+support vector machines; classification; k nearest neighbor; decision tree; classifier; decision trees; classifiers; nearest neighbor classifier; class; support vector

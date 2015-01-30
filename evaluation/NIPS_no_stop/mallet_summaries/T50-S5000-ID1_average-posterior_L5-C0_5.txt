@@ -1,0 +1,1 @@
+nearest neighbor; pattern classification; training set; class labels; pattern classifiers; classification tasks; training data; decision regions; weak classifiers; classification algorithms

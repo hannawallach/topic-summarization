@@ -1,0 +1,1 @@
+ill posed problem; deterministic annealing; problem; optimization problem; boltzmann machine; simulated annealing; ill posed; objective function; constrained optimization; optimization

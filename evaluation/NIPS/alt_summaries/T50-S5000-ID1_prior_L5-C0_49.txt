@@ -1,0 +1,1 @@
+space ir d x ir; projection pursuit regression ppr friedman; one dimensional function approximation; projection pursuit regression ppr; piecewise linear membership functions; radial basis functions advocated; nonlinearly parametrized approximation classes; smooth function gj projection; arbitrary basis functions smola; kernel function kx x

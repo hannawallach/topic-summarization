@@ -1,0 +1,1 @@
+winner take all wta; dynamics; ordinary differential equations; recurrent neural networks; recurrent neural network; attractor neural networks; stable fixed points; fixed points; winner take all; fully connected networks

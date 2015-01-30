@@ -1,0 +1,1 @@
+gradient descent; stochastic gradient descent; gradient descent algorithm; gradient; gradient descent learning; gradient descent optimization; line learning algorithm; performs gradient descent; gradient descent method; desired output vector

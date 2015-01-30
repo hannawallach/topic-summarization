@@ -1,0 +1,1 @@
+forward dynamics relating motor commands; control; inverse dynamics model; motor commands; motor; forward model; desired trajectory; motor command; motor control; robot arm

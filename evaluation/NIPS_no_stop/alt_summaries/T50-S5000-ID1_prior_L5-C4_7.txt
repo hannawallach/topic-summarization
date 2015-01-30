@@ -1,0 +1,1 @@
+recurrent; sequences; languages; regular grammar; finite automaton; language; sequence; grammar; regular languages; bengio frasconi

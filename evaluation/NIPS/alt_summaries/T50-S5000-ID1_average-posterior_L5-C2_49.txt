@@ -1,0 +1,1 @@
+one dimensional function approximation; function; functions; uc irvine repository; radial basis functions; sigmoid transfer functions; polynomials rational functions; canonical piecewise linear; ridge function approximation; angular smooth functions

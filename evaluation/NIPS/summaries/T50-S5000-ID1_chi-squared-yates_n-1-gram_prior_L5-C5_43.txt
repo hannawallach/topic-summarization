@@ -1,0 +1,1 @@
+figure ground segregation; top down; bottom up; figure la; figure ground; figure lb; axis aligned; block diagram; black box; wiring diagram

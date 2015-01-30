@@ -1,0 +1,1 @@
+function; functions; radial basis functions; radial basis function; function approximation; kernel functions; transfer function; linear; rational functions; approximation

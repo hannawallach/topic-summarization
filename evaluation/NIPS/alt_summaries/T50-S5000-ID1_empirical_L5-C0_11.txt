@@ -1,0 +1,1 @@
+vocabulary continuous speech recognition csr; optical character recognition ocr; vocabulary continuous speech recognition; multi state time delay; american english japanese chinese; hand printed character recognition; multi speaker phoneme recognition; speaker independent speech recognition; continuous speech recognition csr; hmm speech recognition system

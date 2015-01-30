@@ -1,0 +1,1 @@
+markov decision processes mdps; reinforcement learning rl; dynamic programming dp; optimal value function; markov decision problems; stochastic control problems; temporal difference td; reinforcement learning algorithms; q learning watkins; finite state controller

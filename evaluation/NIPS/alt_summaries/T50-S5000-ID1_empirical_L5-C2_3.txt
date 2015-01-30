@@ -1,0 +1,1 @@
+alvinn autonomous land vehicle; carnegie mellon autonomous navigation; laser range finder; remote sensing; lighting conditions; color constancy; obstacle avoidance; video camera; detection; false alarm

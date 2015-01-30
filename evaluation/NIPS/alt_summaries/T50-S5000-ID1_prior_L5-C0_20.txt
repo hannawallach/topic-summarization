@@ -1,0 +1,1 @@
+input units k hidden units; hidden units; its hidden unit activations hinton; multi layer feedforward perceptrons mlps; units input units hidden units; new hidden unit receives connections; back propagation rumelhart hinton williams; back propagation; hidden layer; units

@@ -1,0 +1,1 @@
+control; model; motor; system; trajectory; inverse; controller; arm; dynamics; feedback

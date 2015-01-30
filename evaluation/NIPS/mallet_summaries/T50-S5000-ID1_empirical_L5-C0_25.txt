@@ -1,0 +1,1 @@
+probability distribution; monte carlo; posterior distribution; gaussian processes; mean field; gaussian process; bayesian networks; probability distributions; markov chain; bayesian inference

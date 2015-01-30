@@ -1,0 +1,1 @@
+gradient descent; stochastic gradient descent; gradient; algorithm; learning; gradient descent learning; gradient descent algorithm; learning rate; learning algorithm; global learning rate

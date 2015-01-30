@@ -1,0 +1,1 @@
+admission control routing; massively parallel; connection machine; resource allocation; bit serial; parallel computer; simd architectures; channel allocation; parallel computers; general purpose

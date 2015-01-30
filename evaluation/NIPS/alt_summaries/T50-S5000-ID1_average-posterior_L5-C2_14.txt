@@ -1,0 +1,1 @@
+different learning rate annealing schedules; gradient descent; stochastic gradient descent; the natural gradient learning; stochastic gradient descent algorithm; gradient; algorithm; learning; learning rate; learning algorithm

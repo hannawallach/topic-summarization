@@ -1,0 +1,1 @@
+vocabulary continuous speech recognition; continuous speech recognition csr; hidden markov models hmm; hidden markov models hmms; continuous speech recognition system; speech recognition; continuous speech recognition; speech recognition system; automatic speech recognition; hidden markov models

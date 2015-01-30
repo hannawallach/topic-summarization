@@ -1,0 +1,1 @@
+monte carlo; posterior distribution; gaussian processes; gaussian process; bayesian treatment; markov chain monte carlo; gaussian distribution; markov chain; covariance function; rectified gaussian

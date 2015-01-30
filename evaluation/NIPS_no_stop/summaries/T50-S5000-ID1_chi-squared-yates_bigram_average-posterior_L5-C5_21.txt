@@ -1,0 +1,1 @@
+problem; optimization; optimization problem; simulated annealing; objective function; energy function; solution; deterministic annealing; optimization problems; combinatorial optimization

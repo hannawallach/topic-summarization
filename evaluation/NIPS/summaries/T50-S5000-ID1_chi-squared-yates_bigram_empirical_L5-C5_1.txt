@@ -1,0 +1,1 @@
+vc dimension; vapnik chervonenkis dimension; linear threshold elements; linear threshold; threshold; lower bound; upper bound; bounds; bound; dimension

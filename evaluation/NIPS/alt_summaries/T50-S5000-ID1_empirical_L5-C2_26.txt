@@ -1,0 +1,1 @@
+mean field theory mft; ill posed problem; softassign quadratic assignment algorithm; traveling salesman problem tsp; problem; deterministic annealing; optimization problem; combinatorial optimization problems; traveling salesman problem; boltzmann machine

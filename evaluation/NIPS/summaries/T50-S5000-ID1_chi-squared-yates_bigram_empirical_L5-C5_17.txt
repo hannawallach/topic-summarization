@@ -1,0 +1,1 @@
+dynamics; ordinary differential equations; recurrent neural networks; recurrent neural network; stable fixed points; fixed points; winner take all; hopfield; spurious fixed points; stable fixed point

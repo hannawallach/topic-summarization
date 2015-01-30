@@ -1,0 +1,1 @@
+time series prediction; hidden markov models hmms; time series; stochastic nonlinear dynamical systems; time; chaotic time series; state; discrete time series; recurrent; finite state automata

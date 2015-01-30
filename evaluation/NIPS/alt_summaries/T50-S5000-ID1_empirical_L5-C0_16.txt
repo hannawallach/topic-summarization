@@ -1,0 +1,1 @@
+model nonlinear auto regressive moving; forward backward kalman filter equations; systems sequence prediction finite state; inputoutput dependencies span long intervals; non chaotic time series breaks; time series prediction; hidden markov models hmms; time series; stochastic nonlinear dynamical systems; time

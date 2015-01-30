@@ -1,0 +1,1 @@
+training data; cross validation; data set; training set; data points; training examples; squared error; target function; empirical risk; data sets

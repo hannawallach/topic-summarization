@@ -1,0 +1,1 @@
+gradient descent; learning algorithm; learning rate; learning algorithms; learning rates; batch learning; line learning; learning rule; local minima; weight space

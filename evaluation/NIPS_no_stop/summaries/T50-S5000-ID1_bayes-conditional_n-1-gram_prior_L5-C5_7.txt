@@ -1,0 +1,1 @@
+recurrent; positive negative examples; finite automata; finite automaton; grammatical inference; regular languages; term dependencies; finite machine; sequences; context free

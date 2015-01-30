@@ -1,0 +1,1 @@
+hidden units; back propagation; hidden layer; hidden unit; output units; output unit; fully connected; input units; input layer; hidden layers

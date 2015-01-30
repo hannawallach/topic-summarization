@@ -1,0 +1,1 @@
+vc dimension; linear threshold; lower bound; upper bound; upper bounds; vapnik chervonenkis; boolean functions; machines svm; hard threshold; machines svms

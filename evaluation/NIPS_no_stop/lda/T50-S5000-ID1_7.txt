@@ -1,0 +1,1 @@
+recurrent; sequences; sequence; finite; language; languages; grammar; discrete; symbol; symbols

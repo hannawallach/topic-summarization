@@ -1,0 +1,1 @@
+dynamics; fixed points; hopfield; ordinary differential equations; network; dynamical; neurons; attractor; state; recurrent neural networks

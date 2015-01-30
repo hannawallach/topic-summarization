@@ -1,0 +1,1 @@
+reinforcement learning; partially observable; real world; open loop; environmental state; mobile robot; eligibility traces; world model; path planning; action policies

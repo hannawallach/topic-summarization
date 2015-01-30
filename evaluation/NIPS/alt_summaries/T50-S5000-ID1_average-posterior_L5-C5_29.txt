@@ -1,0 +1,1 @@
+parallel; massively parallel; processing elements; connection machine; address block; processors; communication; software modules; special purpose; hardware

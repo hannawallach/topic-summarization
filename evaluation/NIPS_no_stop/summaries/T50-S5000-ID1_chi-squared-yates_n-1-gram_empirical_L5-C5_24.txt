@@ -1,0 +1,1 @@
+object; objects; object recognition; features; matching; recognition; views; scale; images; translation rotation

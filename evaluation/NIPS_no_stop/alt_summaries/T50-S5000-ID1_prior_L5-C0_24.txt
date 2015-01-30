@@ -1,0 +1,1 @@
+object; object recognition; objects; images invariant translation rotation labeling; rigid objects restricted objects scheme; depth rotation object translation rotation; resolution coarse scale learn information; object represented object centered coordinates; problem scene feature locations jittered; recognize views object view angle

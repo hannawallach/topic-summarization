@@ -1,0 +1,1 @@
+open loop closed loop control; control; nonlinear feedback control law; controller; barto sutton anderson; closed loop control; actor critic; adaptive control; actor critic architecture; backgammon game tesauro

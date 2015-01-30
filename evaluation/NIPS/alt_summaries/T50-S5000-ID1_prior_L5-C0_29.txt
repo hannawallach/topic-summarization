@@ -1,0 +1,1 @@
+address blocks on mail pieces; graphically oriented general purpose simulation; bit serial processing elements each; clock cycles each communication interface; cm transparently handles message buffering; massively parallel simd computer; ring array processor rap; receive data each processing; execution time compiler writers; number supercomputers offer programming

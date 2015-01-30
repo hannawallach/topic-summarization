@@ -1,0 +1,1 @@
+recurrent; sequences; languages; output sequences sequence; grammatical inference fu; sequences output sequences; regular grammar; language; finite automaton; sequence

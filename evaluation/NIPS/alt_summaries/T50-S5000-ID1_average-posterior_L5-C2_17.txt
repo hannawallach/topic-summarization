@@ -1,0 +1,1 @@
+ordinary differential equations; dynamics; recurrent neural network; excitatory inhibitory networks; fixed points; self coupling term; recurrent neural networks; fully connected networks; attractor neural network; attractor neural networks

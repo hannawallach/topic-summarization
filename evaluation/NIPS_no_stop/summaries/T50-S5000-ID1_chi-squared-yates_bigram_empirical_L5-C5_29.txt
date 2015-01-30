@@ -1,0 +1,1 @@
+patients; medical diagnosis; diagnosis; breast cancer; heart; patient; fuzzy; magnetic resonance; ventricular tachycardia; blood

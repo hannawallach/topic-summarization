@@ -1,0 +1,1 @@
+feature space; self organizing; vector quantization; feature extraction; feature vectors; input space; feature vector; feature map; codebook vectors; high dimensional

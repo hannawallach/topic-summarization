@@ -1,0 +1,1 @@
+memory; associative; patterns; hopfield; capacity; stored; pattern; storage; memories; synaptic

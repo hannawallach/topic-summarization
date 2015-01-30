@@ -1,0 +1,1 @@
+decision tree; decision trees; pattern recognition; pattern classification; class labels; training set; error rate; decision regions; decision boundary; feature vector

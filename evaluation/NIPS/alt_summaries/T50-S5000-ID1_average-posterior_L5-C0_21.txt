@@ -1,0 +1,1 @@
+k nearest neighbor knn classifiers; condensed k nearest neighbor classifiers; gaussian k nearest neighbor knn; semi supervised support vector machines; two class problem traditional svm; recognition problem we adapt svm; semi supervised support vector machine; k class problem solve each; support vector machine svm; support vector machines svms

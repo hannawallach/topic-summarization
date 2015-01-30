@@ -1,0 +1,1 @@
+maximum likelihood; em algorithm; mixture models; mixture model; density estimation; model parameters; generative model; log likelihood; gaussian mixtures; gaussian mixture

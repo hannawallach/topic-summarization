@@ -1,0 +1,1 @@
+motor; motor commands; motor control; inverse; trajectory; arm; control; inverse kinematics; movement; forward modeling

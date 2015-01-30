@@ -1,0 +1,1 @@
+markov decision processes mdps; continuous stochastic dynamic systems; approximating dynamic programming dp; semi markov decision problems; optimal value function vx; reinforcement learning rl; dynamic programming dp; finite state controller; optimal value function; hamilton jacobi bellman

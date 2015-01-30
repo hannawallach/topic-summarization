@@ -1,0 +1,1 @@
+mean field theory; combinatorial optimization problems; traveling salesman problem; problem; ill posed; deterministic annealing; optimization problem; simulated annealing; boltzmann machine; field theory mft

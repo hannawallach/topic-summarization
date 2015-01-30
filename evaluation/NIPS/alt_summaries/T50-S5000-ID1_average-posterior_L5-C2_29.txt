@@ -1,0 +1,1 @@
+massively parallel simd computer; ring array processor rap; parallel; massively parallel; general purpose machine; massively parallel machines; computer and simulator; scheduling basic blocks; destination address block; connection machine cm

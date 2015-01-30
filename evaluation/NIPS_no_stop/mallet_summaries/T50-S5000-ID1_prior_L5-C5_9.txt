@@ -1,0 +1,1 @@
+mutual information; data compression; pairwise clustering; data clustering; data sets; text retrieval; information bottleneck; proximity data; unsupervised clustering; data visualization

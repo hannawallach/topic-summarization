@@ -1,0 +1,1 @@
+tensor product representation; distributed connectionist production; lower level description; suffix tree transducers; natural language processing; language; natural language; lower level connectionist; noun phrase recognizer; fully distributed representations

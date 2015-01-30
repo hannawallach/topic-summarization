@@ -1,0 +1,1 @@
+generalization performance; generalization error; training set; training examples; weight decay; early stopping; training sets; improve generalization; occam razor; penalty term

@@ -1,0 +1,1 @@
+ordinary differential equations; dynamics; recurrent neural network; excitatory inhibitory networks; fixed points; winner take all; hopfield; stable state; hopf bifurcation; lyapunov function

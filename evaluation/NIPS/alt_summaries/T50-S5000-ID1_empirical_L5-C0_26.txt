@@ -1,0 +1,1 @@
+solving inverse ill posed problems; simulated annealing kirkpatrick gelatt vecchi; barrier function which ensures positivity; optimization strategy mean field annealing; mean field theory mft; ill posed problem; softassign quadratic assignment algorithm; traveling salesman problem tsp; problem; deterministic annealing

@@ -1,0 +1,1 @@
+function approximation; transfer function; kernel functions; basis functions; rational functions; piecewise linear; loss function; linear regression; sv machines; membership functions

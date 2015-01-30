@@ -1,0 +1,1 @@
+decompose single trial eeg epochs; eeg recordings rejecting eeg segments; sorting single trial erp epochs; time locked brain activity related; correlations among eeg waveforms recorded; event related potentials erps; single trial eeg records; single trial erp records; crustacean stomatogastric mill selverston; artifacts from eeg records

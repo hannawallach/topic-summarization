@@ -1,0 +1,1 @@
+neuron; action potentials; spike trains; neurons; membrane potential; spike; firing; firing rate; synaptic; spiking neurons

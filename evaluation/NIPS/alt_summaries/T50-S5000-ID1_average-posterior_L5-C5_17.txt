@@ -1,0 +1,1 @@
+ordinary differential equations; dynamics; fixed points; winner take all; hopfield; stable state; hopf bifurcation; lyapunov function; network; network dynamics

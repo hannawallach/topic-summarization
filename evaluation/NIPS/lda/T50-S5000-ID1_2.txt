@@ -1,0 +1,1 @@
+training; generalization; error; learning; weights; weight; examples; complexity; performance; network

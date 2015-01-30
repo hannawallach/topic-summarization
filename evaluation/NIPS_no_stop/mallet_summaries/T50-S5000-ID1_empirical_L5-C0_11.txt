@@ -1,0 +1,1 @@
+speech recognition; hidden markov; baum welch; speaker independent; word recognition; emission probabilities; hmm system; continuous speech recognition; spoken language; hidden markov models

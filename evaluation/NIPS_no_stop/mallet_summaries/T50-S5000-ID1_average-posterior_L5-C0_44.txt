@@ -1,0 +1,1 @@
+gradient descent; learning algorithm; learning algorithms; weight vector; local minima; learning rates; line learning; online learning; backpropagation algorithm; convergence rate

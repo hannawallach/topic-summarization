@@ -1,0 +1,1 @@
+training; generalization; generalization error; generalization performance; error; soft committee machine; weight decay; brain damage obd; brain surgeon obs; weights

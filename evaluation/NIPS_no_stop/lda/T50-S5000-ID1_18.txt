@@ -1,0 +1,1 @@
+recognition; character; characters; segmentation; handwritten; system; letters; digit; digits; pattern

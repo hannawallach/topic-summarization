@@ -1,0 +1,1 @@
+motor commands; motor control; forward model; desired trajectory; motor command; robot arm; inverse kinematics; inverse dynamics; inverse model; feedback controller

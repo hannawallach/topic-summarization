@@ -1,0 +1,1 @@
+object; object recognition; objects; features; invariant object recognition; matching; recognition; views; scale; images

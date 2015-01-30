@@ -1,0 +1,1 @@
+gradient descent; stochastic gradient descent; gradient descent algorithm; gradient; gradient descent learning; global learning rate; gradient descent optimization; gradient descent algorithms; line learning algorithm; performs gradient descent

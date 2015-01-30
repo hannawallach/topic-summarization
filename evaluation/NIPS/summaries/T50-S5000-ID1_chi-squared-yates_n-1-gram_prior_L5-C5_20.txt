@@ -1,0 +1,1 @@
+hidden units; back propagation; units; hidden layer; multi layer perceptron; layer; hidden; input; network; output

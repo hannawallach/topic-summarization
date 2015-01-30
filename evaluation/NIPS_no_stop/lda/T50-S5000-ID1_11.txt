@@ -1,0 +1,1 @@
+speech; recognition; word; system; hmm; speaker; acoustic; markov; hmms; hidden

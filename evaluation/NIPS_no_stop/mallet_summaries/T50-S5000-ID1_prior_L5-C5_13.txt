@@ -1,0 +1,1 @@
+massively parallel; resource allocation; battery usage; instruction scheduling; program cycles user; virtual paths; cm processors; general purpose; channels channel; consisting tens

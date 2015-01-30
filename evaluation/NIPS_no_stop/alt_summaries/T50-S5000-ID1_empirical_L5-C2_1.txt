@@ -1,0 +1,1 @@
+articulator movements emg muscle; motor; motor commands; motor control; inverse; trajectory; arm; nervous system cns; inverse dynamics model; control robot arms

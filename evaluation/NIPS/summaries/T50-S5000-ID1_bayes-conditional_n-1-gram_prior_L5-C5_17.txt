@@ -1,0 +1,1 @@
+dynamics; fixed points; winner take all wta; hopfield; ordinary differential equations; network; dynamical; neurons; attractor; state

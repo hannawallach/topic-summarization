@@ -1,0 +1,1 @@
+simulated annealing; optimization problem; local minima; cost function; objective function; optimization problems; deterministic annealing; energy function; quadratic programming; problem solving

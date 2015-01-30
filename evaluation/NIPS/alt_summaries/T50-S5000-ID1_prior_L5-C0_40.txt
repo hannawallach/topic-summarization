@@ -1,0 +1,1 @@
+forward dynamics relating motor commands; motor commands appropriate articulator trajectories; hand position error feedback controller; forward dynamics model along; control; inverse dynamics model; motor commands; musculo skeletal system hogan; modeling tile inverse dynamics; control sensorimotor control coordinate

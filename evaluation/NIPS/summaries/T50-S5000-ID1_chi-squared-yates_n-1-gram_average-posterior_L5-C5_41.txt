@@ -1,0 +1,1 @@
+cross validation; kullback leibler divergence; sum squared error; mean squared error; training data; training data set; model selection criterion; structural risk minimization; training set; empirical risk minimization

@@ -1,0 +1,1 @@
+remote sensing; lighting conditions; obstacle avoidance; color constancy; video camera; false alarm; fault detection; fault tolerance; tracking system; detection performance

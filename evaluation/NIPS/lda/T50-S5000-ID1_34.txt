@@ -1,0 +1,1 @@
+neuron; neurons; synaptic; firing; spike; model; membrane; time; potential; cell

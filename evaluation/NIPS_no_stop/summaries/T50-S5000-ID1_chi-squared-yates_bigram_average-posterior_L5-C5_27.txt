@@ -1,0 +1,1 @@
+robot; modules; environment; obstacle avoidance; system; mobile robot; goal directed; autonomous navigation; software modules; carnegie mellon

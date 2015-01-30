@@ -1,0 +1,1 @@
+vc dimension; lower bound; upper bound; lower bounds; upper bounds; neural networks; activation function; activation functions; sample complexity; linear threshold

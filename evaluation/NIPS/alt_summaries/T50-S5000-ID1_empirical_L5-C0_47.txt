@@ -1,0 +1,1 @@
+find optimal memoryless policies; sarsa called truncated sarsa; finding optimal memoryless policies; whenever an agent learns; reinforcement learning current model; best deterministic memoryless policy; memory based reinforcement learning; an operational mobile robot; real world nonstationary tasks; partially observable markov decision

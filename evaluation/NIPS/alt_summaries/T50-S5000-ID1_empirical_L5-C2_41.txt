@@ -1,0 +1,1 @@
+integrated mean squared error; cross validation; kullback leibler divergence; training data; training set; sum squared error; training data set; cross validation error; model selection criterion; data

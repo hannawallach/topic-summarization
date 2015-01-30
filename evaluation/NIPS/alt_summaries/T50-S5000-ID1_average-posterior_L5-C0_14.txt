@@ -1,0 +1,1 @@
+different learning rate annealing schedules; gradient descent; converge learning rate schedules darken; exemplar xt the stochastic step; weight at time t xt; the natural riemannian gradient the; the instantaneous cost function convergence; on line gradient descent learning; weight update function the exemplars; function second derivative matrix hessian

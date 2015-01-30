@@ -1,0 +1,1 @@
+control; closed loop control; controller; actor critic; closed loop; barto sutton anderson; open loop; control law; loop control; adaptive control

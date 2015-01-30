@@ -1,0 +1,1 @@
+maximum likelihood; density estimation; probability density; log likelihood; maximum entropy; probability distribution; probability distributions; gaussian mixtures; expectation maximization; posterior probabilities

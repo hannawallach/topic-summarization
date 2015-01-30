@@ -1,0 +1,1 @@
+control; motor; motor commands; inverse dynamics; trajectory; relating motor commands; motor control; arm; inverse; controller

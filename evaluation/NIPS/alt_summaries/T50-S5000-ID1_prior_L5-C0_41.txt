@@ -1,0 +1,1 @@
+leave one out cross validation; cross validation squared error measure; cross validation gcv unbiased risk; integrated mean squared error; several data points obtained; gcv method confidence intervals; cross validation method lemma; target outputs yx one; housing data set balancing; expected training set error

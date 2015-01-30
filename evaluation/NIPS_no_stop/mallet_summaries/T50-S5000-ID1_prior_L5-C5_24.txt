@@ -1,0 +1,1 @@
+object recognition; features object; translation invariance; template matching; hough transform; view object; coarse fine; parts object; recognition objects; object scene

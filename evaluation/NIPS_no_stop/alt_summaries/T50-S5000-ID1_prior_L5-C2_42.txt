@@ -1,0 +1,1 @@
+encoded firing rate poisson neuron; information carried spike trains; action potentials spikes; term potentiation ltp; noisy spiking neurons; evoked spike train; action potential timing; integrate fire neurons; interspike interval histograms; carried behaving rhesus
