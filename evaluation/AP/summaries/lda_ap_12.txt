@@ -1,1 +1,1 @@
-music, band, theater, record, musical, play, singer, rock, center, show
+music; band; theater; record; musical; play; singer; rock; center; show

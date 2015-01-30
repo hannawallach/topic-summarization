@@ -1,1 +1,1 @@
-military, defense, force, u, navy, pentagon, army, air, soldiers, forces
+military; defense; force; u; navy; pentagon; army; air; soldiers; forces

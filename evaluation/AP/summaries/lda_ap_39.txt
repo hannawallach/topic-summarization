@@ -1,1 +1,1 @@
-school, students, university, education, college, board, student, schools, teachers, women
+school; students; university; education; college; board; student; schools; teachers; women

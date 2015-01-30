@@ -1,1 +1,1 @@
-senate, state, campaign, mecham, republican, members, committee, keating, governor, election
+senate; state; campaign; mecham; republican; members; committee; keating; governor; election

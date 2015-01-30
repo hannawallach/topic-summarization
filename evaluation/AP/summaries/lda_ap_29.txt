@@ -1,1 +1,1 @@
-u, s, drug, in, panama, noriega, united, states, mexico, government
+u; s; drug; in; panama; noriega; united; states; mexico; government

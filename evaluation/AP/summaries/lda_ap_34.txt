@@ -1,1 +1,1 @@
-army, police, killed, troops, military, soldiers, rebels, wounded, guerrillas, fighting
+army; police; killed; troops; military; soldiers; rebels; wounded; guerrillas; fighting
