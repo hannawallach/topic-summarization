@@ -107,3 +107,7 @@ $(RESULTS_DIR)/turbo_topics/%/T$(T)-S$(S)-ID$(ID)_no-perm_C$(C)-P$(P):  $(RESULT
 
 # note that this is what Dave suggested in person and faster than
 # using permutation tests (as in the paper)
+
+# for corpus in `echo AP AP_no_stop FOMC FOMC_no_stop NIPS NIPS_no_stop`; do python src/postprocess.py --results results/lda/"$corpus"/T50-S5000-ID1/topic-keys.txt --output evaluation/"$corpus"/lda; done
+
+# for corpus in `echo AP AP_no_stop FOMC FOMC_no_stop NIPS NIPS_no_stop`; do for dir in `echo alt_summaries mallet_summaries summaries`; do for x in `ls results/"$dir"/"$corpus"`; do python src/postprocess.py --results results/"$dir"/"$corpus"/$x --output evaluation/"$corpus"/"$dir"; done; done; done
