@@ -1,0 +1,1 @@
+training; error; weights; generalization; learning; networks; performance; training set; trained; ensemble

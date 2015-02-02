@@ -1,0 +1,1 @@
+dynamics; network; neurons; state; neuron; hopfield; networks; system; states; time

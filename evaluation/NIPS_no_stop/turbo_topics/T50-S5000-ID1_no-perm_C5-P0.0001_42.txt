@@ -1,0 +1,1 @@
+neurons; neuron; activity; firing; spike; information; spikes; temporal; rate; postsynaptic

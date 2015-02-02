@@ -1,0 +1,1 @@
+function; functions; linear; approximation; nonlinear; kernel; coefficients; parameters; some; regularization

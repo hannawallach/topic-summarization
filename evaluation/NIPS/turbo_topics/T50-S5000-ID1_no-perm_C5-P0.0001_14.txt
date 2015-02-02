@@ -1,0 +1,1 @@
+algorithm; learning; convergence; algorithms; gradient; gradient descent; stochastic; error; function; parameter

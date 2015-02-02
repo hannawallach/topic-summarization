@@ -1,0 +1,1 @@
+algorithm; learning; algorithms; convergence; function; gradient; gradient descent; stochastic; vector; weight

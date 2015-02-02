@@ -1,0 +1,1 @@
+training; error; learning; weights; generalization; complexity; examples; weight; generalization error; teacher
